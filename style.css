@@ -16,7 +16,8 @@ nav {
   border-bottom: 2px solid var(--gold);
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   padding: 1.2rem;
 }
 nav a {
@@ -57,6 +58,7 @@ h2 {
   display: flex;
   gap: 2.5rem;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 .profile-pic {
   width: 220px;
@@ -65,6 +67,10 @@ h2 {
   border-radius: 4px;
   border: 3px solid var(--gold);
   flex-shrink: 0;
+}
+.profile-text {
+  flex: 1;
+  min-width: 250px;
 }
 .profile-text p {
   margin-bottom: 1rem;
@@ -90,4 +96,39 @@ a.contact-link {
   color: #666;
   font-size: 0.9rem;
   font-style: italic;
+}
+
+/* ---- Responsive: tablets and phones ---- */
+@media (max-width: 700px) {
+  main {
+    padding: 0 1.2rem;
+    margin: 2rem auto;
+  }
+  nav {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  nav a {
+    font-size: 0.85rem;
+  }
+  h1 {
+    font-size: 1.7rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+  }
+  .profile-grid {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+  }
+  .profile-pic {
+    width: 160px;
+    height: 160px;
+  }
+  .profile-text {
+    text-align: left;
+    min-width: 0;
+  }
 }
